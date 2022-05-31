@@ -1,0 +1,117 @@
+/* .ar-60::after{
+    content: '30';
+    position: absolute;
+    bottom: 7px;
+    left: -10px;
+    font-size: 25px;
+} */
+.vertical-arr{
+    width: 5px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+}
+.horizontal-arr{
+    width: 10px;
+	height: 5px;
+	background-color: black;
+	position: absolute;
+}
+.ar-15{
+	top: 50%;
+	right: 0px;
+}
+.ar-30{
+    bottom: 0px;
+	left: 50%;
+}
+.ar-60{
+    top: 0px;
+    left: 50%;
+}
+.ar-45{
+	top: 50%;
+	left: 0px;
+}
+.ar-45::after{
+    content: '45';
+	position: absolute;
+	top: -12px;
+	left: 10px;
+	font-size: 26px;
+}
+.ar-60::after{
+    content: '60';
+	position: absolute;
+	top: 10px;
+	left: -12px;
+	font-size: 26px;
+}
+.ar-30::after{
+	content: '30';
+	position: absolute;
+	bottom: 10px;
+	left: -10px;
+	font-size: 26px;
+}
+.ar-15::after{
+    content: '15';
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-size: 26px;
+}
+.main-arr{
+    position: absolute;
+    height: 46%;
+    width: 3px;
+    background-color:greenyellow;
+    left: 50%;
+    top: 20px;
+    z-index: 2;
+    transform-origin: left 95%;
+    animation-name:arrow;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* transform: rotate(100deg); */
+}
+@keyframes arrow{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        background-color:yellow;
+    }
+    50%{
+        background-color: red;
+    }
+    75%{
+        background-color:green;
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.main-arr::before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 2;
+    top: 95%;
+    left: -1.5px;
+    font-size: 26px;
+}
+#StopWatch{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border: solid green 8px;
+    border-radius: 50%;
+    position: relative;
+}
